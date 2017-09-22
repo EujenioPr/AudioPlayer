@@ -1,0 +1,297 @@
+html, body
+    padding: 0
+    margin: 0
+    height: 100%
+    width: 100%
+    background-color: #EFEFEF
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+
+ul, ul li, h1, h2, h3, h4, p
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+button
+    cursor: pointer
+    outline: none !important
+
+::-webkit-scrollbar
+    width: 4px
+    // background-color: pink
+
+::-webkit-scrollbar-track
+    background-color: #4C4C4C
+
+::-webkit-scrollbar-thumb
+    background-color: #ECECEC
+    border-radius: 5px
+
+.container
+    position: relative
+    left: calc(50% - 170px)
+    top: calc(50% - 250px)
+    width: 340px
+    height: 400px
+    background-color: #424242
+    border-radius: 5px
+    // box-shadow: 0px 0px 0px 10px lightgrey
+
+    .player
+        width: 100%
+        height: 100%
+        border-radius: 5px
+        // 
+        box-shadow: 3px 9px 20px 1px #a5a5a5
+
+        .player-header
+            width: 100%
+            height: 140px
+            background-color: transparent
+            border-radius: 5px 5px 0 0
+            
+            .player-bg
+                width: 100%
+                height: 70px
+                position: relative
+                .curr-song-name
+                    width: 100%
+                    height: 44px
+                    // background-color: pink
+                    position: absolute
+                    text-align: center
+                    span
+                        color: #dedede
+                        display: block
+                        margin-top: 20px
+                        font-size: 18px
+                        font-weight: 500
+
+                .player-bg-timer
+                    width: 100%
+                    height: 20px
+                    // background-color: pink
+                    position: absolute
+                    left: 0
+                    bottom: 5px
+                    span
+                        color: #cdcdcd
+                        margin: 0 0px
+                        background-color: #333
+                        padding: 0 5px
+                        &:first-child
+                            float: left
+                            border-radius: 0 4px 0 0
+                        &:last-child
+                            float: right
+                            border-radius: 4px 0 0 0
+
+            .player-controls
+                width: 100%
+                height: 70px
+                // background-color: rgba(0, 0, 0, 0.4)
+                background-color: #3C3C3C
+                position: relative
+                box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.17)
+            
+        .player-body
+            width: 100%
+            height: 260px
+            border-radius: 0 0 5px 5px
+            overflow-y: scroll
+            background-color: transparent
+
+            ul#playlist
+                li
+                    width: calc(100% - 2px - 20px)
+                    height: 50px
+                    border: 1px solid #4C4C4C
+                    // background-color: lightgrey
+                    background-color: #4C4C4C
+                    margin-top: 1px
+                    line-height: 50px
+                    padding: 0 10px
+                    color: #CCCCCC
+
+.play-button
+    width: 34px
+    height: 34px
+    display: inline-block
+    margin: 0 10px
+    border: none
+    background-color: rgba(0, 0, 0, 0.1)
+    border-radius: 100%
+    transition: background-color 0.2s ease-in-out
+    margin-top: 8px
+    b
+        display: inline-block
+        width: 14px
+        height: 14px
+        margin-left: 1px
+        margin-top: 3px
+        transition: background-image 0.2s
+        background:
+            image: url('../images/icons/icon-1.svg')
+            repeat: no-repeat
+            position: center
+            size: contain
+    &:hover
+        background-color: rgba(0, 0, 0, 0.2)
+
+.music-pb
+    float: left
+    background:
+        position: center
+        repeat: no-repeat
+        size: 12px
+        image: url('../images/icons/icon-1.svg')
+
+.side-button
+    margin: 0 1px
+    float: left
+    margin: 18px 20px
+    b
+        width: 14px
+        height: 14px
+        margin: 4px 2px 2px 2px
+
+#leftButton
+    b
+        background:
+            image: url('../images/icons/icon-6.svg')
+            repeat: no-repeat
+            position: center
+            size: contain
+    
+#rightButton
+    b
+        background:
+            image: url('../images/icons/icon-4.svg')
+            repeat: no-repeat
+            position: center
+            size: contain
+
+.main-button
+    width: 44px
+    height: 44px
+    margin: 0
+    float: left
+    margin: 13px 0
+    b
+        width: 25px
+        height: 25px
+        margin-left: 2px
+        background:
+            image: url('../images/icons/icon-1.svg')
+            repeat: no-repeat
+            position: center
+            size: contain
+
+.mute
+    width: 20px
+    height: 20px
+    display: inline-block
+    border: none
+    background-color: transparent
+    float: left
+    margin: 23px 10px
+    b
+        display: inline-block
+        width: 20px
+        height: 20px
+        background:
+            image: url('../images/icons/icon-3.svg')
+            repeat: no-repeat
+            position: center
+            size: contain
+
+
+#ranger
+    width: 100%
+    display: block
+    position: absolute
+    left: 0px
+    top: -4px
+    margin: 0
+    transition: height 0.2s ease-in-out, top 0.2s ease-in-out
+    &:hover
+        top: -10px
+        height: 10px
+        // padding: 6px 0
+        cursor: pointer
+
+        &::-webkit-slider-thumb 
+            height: 11px
+            width: 11px
+            border-radius: 100%
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3)
+
+#Tracked
+    width: 0%
+    height: 4px
+    background-color: red
+    position: absolute
+    top: -4px
+    left: 0
+    transition: height 0.2s ease-in-out, top 0.2s ease-in-out
+
+
+input[type="range"]
+    width: 80px
+    float: left
+    margin: 32px 0
+    outline: none !important
+    -webkit-appearance: none !important
+    padding: 0px
+    background: rgba(0, 0, 0, 0.2)
+    height: 4px
+    position: absolute
+    &:hover
+        cursor: pointer
+        &::-webkit-slider-thumb 
+            height: 11px
+            width: 11px
+            border-radius: 100%
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3)
+
+input[type='range']::-ms-fill-lower  
+    background: rgba(0, 0, 0, 0.2)
+
+input[type='range']::-ms-fill-upper  
+    background: rgba(0, 0, 0, 0.2)
+
+input[type='range']::-moz-range-track 
+    border: none
+    background: rgba(0, 0, 0, 0.2)
+
+input[type='range']::-webkit-slider-thumb 
+    -webkit-appearance: none !important
+    background-color: rgba(204, 0, 0, 0.99)
+    height: 4px
+    width: 8px
+    cursor: pointer
+    transition: box-shadow 0.2s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out, border-radius 0.2s ease-in-out
+    position: relative
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0)
+    &:hover
+        height: 11px
+        width: 11px
+        border-radius: 100%
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3)
+
+input[type='range']::-moz-range-thumb 
+    background-color: #545454
+    height: 11px
+    width: 11px
+    border-radius: 100%
+    cursor: pointer
+
+input[type='range']::-ms-thumb 
+    -webkit-appearance: none !important
+    background-color: #545454
+    height: 11px
+    width: 11px
+    border-radius: 100%
+    cursor: pointer
