@@ -1,3 +1,3 @@
 # AudioPlayer
 HTML &amp; VanillaJS
-[Audio Player](https://eujeniopr.github.io/AudioPlayer/)
+<a href="https://eujeniopr.github.io/AudioPlayer/" target="_blank">Audio Player</a>
